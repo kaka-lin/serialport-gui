@@ -44,9 +44,11 @@ class Ui_SerialBox(object):
         
         self.retranslateUi(serialBox)
 
-        #self.open_button.clicked.connect(plotBox.openFile)
-        #self.plot_button.clicked.connect(plotBox.plotData)
-        #self.model.itemChanged.connect(plotBox.onItemChanged)
+        self.openPortBtn.clicked.connect(serialBox.open)
+        self.closePortBtn.clicked.connect(serialBox.close)
+        self.clearBtn.clicked.connect(serialBox.clear)
+        self.recvTextBrowser.cursorPositionChanged.connect(serialBox.autoScroll)
+        self.sendTextButton.clicked.connect(serialBox.write)
 
     def retranslateUi(self, serialBox):
         _translate = QtCore.QCoreApplication.translate
