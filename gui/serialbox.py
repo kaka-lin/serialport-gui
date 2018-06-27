@@ -36,7 +36,7 @@ class SerialBox(QtWidgets.QGroupBox):
         self.port.closeSerial()
     
     def clear(self):
-        print("clear")
+        self.ui.recvTextBrowser.clear()
     
     def write(self):
         data = self.ui.sendTextEdit.toPlainText()
