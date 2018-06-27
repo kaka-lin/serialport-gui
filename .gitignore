@@ -1,0 +1,18 @@
+*.pyc
+*.pyo
+*~
+
+venv/
+.venv/
+
+.vscode
+
+*.csv
+
+.DS_Store
+._.DS_Store
+
+# pyinstaller
+build/
+dist/
+*.spec
