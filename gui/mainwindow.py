@@ -2,6 +2,7 @@ import os
 from PyQt5.QtWidgets import QMainWindow, QFileDialog
 from gui.ui_mainwindow import Ui_MainWindow
 from gui.serialtab import SerialTab
+from gui.modbustab import ModbusTab
 
 class MainWindow(QMainWindow):
     def __init__ (self, app, translator, parent=None):
@@ -17,7 +18,8 @@ class MainWindow(QMainWindow):
     
     def _setup_ui(self):
         """ """
-        self._serial_1 = SerialTab(self.ui.tab)
+        self._uart = SerialTab(self.ui.tab)
+        self._modbus = ModbusTab(self.ui.tab_2)
 
     def openFile(self):
         dir = os.path.dirname(__file__)
