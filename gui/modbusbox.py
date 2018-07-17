@@ -32,6 +32,7 @@ class ModbusBox(QtWidgets.QGroupBox):
         modes = ['TCP', 'RTU']
         for mode in modes:
             self.ui.mode_comboBox.insertItem(0, mode)
+        self.ui.mode_comboBox.setCurrentIndex(0)
         
         port_list = QSerialPortInfo.availablePorts()
         for port in port_list:
