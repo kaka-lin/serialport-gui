@@ -37,4 +37,12 @@
 
     $ python3 kserialport.py
 
-## 範例
+
+### UART
+
+![uart](img/uart.png)
+
+### ModBus
+
+![modbus](img/modbus.png)
+
